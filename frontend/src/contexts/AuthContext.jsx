@@ -17,8 +17,8 @@ export const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const [token, setToken] = useState(localStorage.getItem('token'));
 
-  // ✅ CHANGE THIS TO PORT 5001
-  const API_URL = 'http://localhost:5001/api';
+  
+  const API_URL = `${import.meta.env.VITE_API_URL}/api`;
   
   console.log('API URL:', API_URL);
 
